@@ -32,6 +32,16 @@ let diceRollChart = [
     { rollValue: 12, rollResult: "home run" },
 ];
 
+$(document).on("click", "#settings", function () {
+    event.preventDefault();
+    $("#help-box").show();
+});
+
+$(document).on("click", "#exit", function () {
+    event.preventDefault();
+    $("#help-box").hide();
+});
+
 var intervalID;
 var rollInterval;
 
