@@ -1,0 +1,157 @@
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: repeating-linear-gradient(45deg, #40980ab4, #40980ab4 10px, #268b07b4 10px, #268b07b4 20px);
+}
+
+#baseball-field {
+    display: flex;
+    height: 180px;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 25px;
+}
+
+#diamond {
+    border: solid 21px #a25e2d;
+    width: 100px;
+    height: 100px;
+    transform: rotate(45deg);
+}
+
+#first-base {
+    position: absolute;
+    right: -25px;
+    top: -25px;
+}
+
+#second-base {
+    position: absolute;
+    top: -25px;
+    left: -25px;
+}
+
+#third-base {
+    position: absolute;
+    bottom: -25px;
+    left: -25px;
+}
+
+#home-background {
+    background-color: #a25e2d;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 0;
+    bottom: -37.5px;
+    right: -37.5px;
+}
+
+#home-plate {
+    position: absolute;
+    bottom: -25px;
+    right: -25px;
+}
+
+#score-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+#roll-result {
+    position: absolute;
+    top: 113px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.team-name {
+    border-bottom: 1px solid black;
+}
+
+.team-score {
+    font-size: 36px;
+}
+
+.score-box {
+    background-color: white;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.base {
+    background-color: #ffffff;
+    width: 25px;
+    height: 25px;
+}
+
+.dice {
+    width: 50px;
+    height: 50px;
+}
+
+#inning-count {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#inning-side {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+#out-box {
+    display: flex;
+}
+
+.out-count {
+    background-color: #ffffff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
+#roll-button {
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+#roll-button:hover {
+    background-color: #fff;
+}
+
+#roll-button:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+    #roll-button {
+        min-width: 120px;
+        padding: 0 25px;
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Baseball Game</title>
+        <link rel="stylesheet" href="style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+        <div id="baseball-field">
+            <div id="diamond">
+                <div id="home-background"></div>
+                <div id="first-base" class="base"></div>
+                <div id="second-base" class="base"></div>
+                <div id="third-base" class="base"></div>
+                <div id="home-plate" class="base"></div>
+            </div>
+        </div>
+        <div id="dice-container">
+            <img id="die-1" class="dice" src="images/die1.png"></img>
+            <img id="die-2" class="dice" src="images/die1.png"></img>
+        </div>
+        <button id="roll-button" onclick="startRoll()">Swing!</button>
+        
+        <span id="roll-result"></span>
+        <div id="score-container">
+            <div id="away-box" class="score-box">
+                <div class="team-name">
+                    AWAY
+                </div>
+                <div class="team-score">
+                    <span id="away-score"></span>
+                </div>
+            </div>
+            <div id="home-box" class="score-box">
+                <div class="team-name">
+                    HOME
+                </div>
+                <div class="team-score">
+                    <span id="home-score"></span>
+                </div>
+            </div>
+        </div>
+        
+        
+        <span id="inning-side"></span>
+        <span id="inning-count"></span>
+
+        <div id="out-box">
+            <span id="out-1" class="out-count"></span>
+            <span id="out-2" class="out-count"></span>
+        </div>
+        
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="functionality.js"></script>
+    </body>
+</html>
