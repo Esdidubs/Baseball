@@ -5,6 +5,7 @@ let dice2Roll = 1;
 let diceResult = 0;
 let diceResultObject;
 let diceResultDesc = "";
+let gameOver = false;
 
 let homeScore = 0;
 let awayScore = 0;
@@ -64,7 +65,9 @@ function stop() {
     clearInterval(intervalID);
     clearInterval(rollInterval);
     rollDice();
-    $("#roll-button").prop("disabled", false);
+    if (!gameOver) {
+        $("#roll-button").prop("disabled", false);
+    }
 }
 
 updateDisplay();
@@ -233,7 +236,7 @@ function inningChange() {
             inningWipe();
         }
     } else {
-        if (inning >= 9) {
+        if (inning >= inningsPerNormalGame) {
             if (homeScore !== awayScore) {
                 handleGameOver();
             } else {
@@ -262,7 +265,7 @@ function scoreRun(numberOfRuns) {
         awayScore += numberOfRuns;
     } else {
         homeScore += numberOfRuns;
-        if (inning >= 9 && homeScore > awayScore) {
+        if (inning >= inningsPerNormalGame && homeScore > awayScore) {
             handleGameOver();
         }
     }
@@ -270,5 +273,5 @@ function scoreRun(numberOfRuns) {
 
 function handleGameOver() {
     homeScore > awayScore ? (diceResultDesc = "home wins") : (diceResultDesc = "away wins");
-    $("#roll-button").prop("disabled", true);
+    gameOver = true;
 }
