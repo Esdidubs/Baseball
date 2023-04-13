@@ -12,6 +12,16 @@ body {
     background: repeating-linear-gradient(45deg, #40980ab4, #40980ab4 10px, #268b07b4 10px, #268b07b4 20px);
 }
 
+button {
+    background-color: #000000;
+    border: 1px solid black;
+    border-radius: none;
+    color: #ffffff;
+    height: 5rem;
+    padding: 1rem;
+    width: auto;
+}
+
 #baseball-field {
     display: flex;
     height: 180px;
@@ -133,6 +143,7 @@ body {
     color: #422800;
     cursor: pointer;
     display: inline-block;
+    height: auto;
     margin: 10px;
     font-weight: 600;
     font-size: 18px;
@@ -196,6 +207,8 @@ body {
     font-weight: bold;
     height: 25px;
     margin-top: 10px;
+    padding: 0;
+    width: 25px;
 }
 
 @media (min-width: 768px) {
